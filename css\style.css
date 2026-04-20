@@ -1,0 +1,233 @@
+/* Global Reset and Base Styles */
+:root {
+    /* Modern and engaging palette */
+    --primary-color: #007bff; /* Blue - suggests depth/technology */
+    --secondary-color: #6c757d; /* Gray - neutral background */
+    --accent-color: #ffc107; /* Yellow/Gold - suggests spirituality/mystery */
+    --text-dark: #333;
+    --text-light: #f8f9fa;
+    --bg-section: #ffffff;
+    --alt-bg: #f4f7f9;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-section);
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+/* Header and Navigation */
+.header {
+    background: #1e2736; /* Dark background for contrast */
+    color: var(--text-light);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--accent-color); /* Highlight the brand name */
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav li a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0 15px;
+    display: block;
+    transition: color 0.3s;
+}
+nav li a:hover {
+    color: var(--primary-color);
+}
+/* General Section Styles */
+.section {
+    padding: 60px 0;
+}
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    color: var(--primary-color);
+}
+.section-text {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.alt-bg {
+    background-color: var(--alt-bg);
+}
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('placeholder-quantum-bg.jpg'); /* Assumes a placeholder background image */
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    text-align: center;
+    padding: 100px 0;
+}
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    color: var(--text-light);
+    text-shadow: 2px 2px 4px #000;
+}
+.subtitle {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+.intro {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.1em;
+}
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #1e2736;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.cta-button:hover {
+    background-color: #e6b000;
+    transform: scale(1.05);
+}
+/* Mid-Section Components */
+.card-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+.card {
+    background: var(--text-light);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.card h3 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    background: var(--text-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.profile-card img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+}
+/* Concepts Section */
+#koncepcje .container {
+    max-width: 960px;
+}
+.content-box {
+    background: var(--text-light);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.content-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+/* Contact/Footer */
+#kontakty {
+    text-align: center;
+}
+.cta-wrapper {
+    margin: 30px 0;
+    display: inline-block;
+}
+.secondary-button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+.secondary-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+.footer {
+    background-color: #1e2736;
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    nav ul {
+        padding: 10px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav li a {
+        padding: 5px 10px;
+    }
+    .hero h1 {
+        font-size: 3em;
+    }
+    .card-grid {
+        flex-direction: column;
+    }
+    .content-box {
+        margin-bottom: 25px;
+    }
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-card img {
+        margin-bottom: 15px;
+    }
+}
